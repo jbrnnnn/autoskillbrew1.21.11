@@ -3,6 +3,7 @@ package com.example.autobrew;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.sound.PositionedSoundInstance;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -717,7 +718,7 @@ public class BrewController {
     }
 
     private static void tickTrip(MinecraftClient mc) {
-        PlayerEntity p = mc.player;
+        ClientPlayerEntity p = mc.player;
         if (wait > 0) { wait--; return; }
         switch (tripPhase) {
             case 0 -> {         // tutup layar yang sedang terbuka (Brewing Stand)
@@ -856,7 +857,7 @@ public class BrewController {
     }
 
     private static void tickRefill(MinecraftClient mc) {
-        PlayerEntity p = mc.player;
+        ClientPlayerEntity p = mc.player;
         if (wait > 0) { wait--; return; }
         switch (refillPhase) {
             case 0 -> {         // tutup Brewing Stand
