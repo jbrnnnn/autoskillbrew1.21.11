@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "autobrew",
+  "version": "${version}",
+  "name": "Auto Potion Brewer",
+  "description": "Otomatis membuat & meng-upgrade potion di Brewing Stand (biasa, splash, lingering, tier I/I+/II) lewat GUI konfigurasi.",
+  "authors": ["You"],
+  "license": "MIT",
+  "icon": "assets/autobrew/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.autobrew.AutoBrewClient"],
+    "modmenu": ["com.example.autobrew.AutoBrewModMenu"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
